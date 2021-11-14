@@ -5,6 +5,7 @@ import hu.advent.of.code.BaseChallenge
 class Puzzle1B: BaseChallenge() {
 
     override fun run() {
+        println("\nDay 1 - Puzzle 2")
         loadDataFromFile("data1.txt")
         val s = data.first()
         var i = 0

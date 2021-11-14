@@ -4,6 +4,7 @@ import hu.advent.of.code.BaseChallenge
 
 class Puzzle3B:BaseChallenge() {
     override fun run() {
+        println("\nDay 3 - Puzzle 2")
         loadDataFromFile("data3.txt")
         val itinerary = Itinerary(data.first())
         val i1 = Itinerary(itinerary.getPath(Itinerary.SANTA))

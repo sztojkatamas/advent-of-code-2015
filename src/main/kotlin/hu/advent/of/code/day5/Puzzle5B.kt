@@ -4,6 +4,7 @@ import hu.advent.of.code.BaseChallenge
 
 class Puzzle5B:BaseChallenge() {
     override fun run() {
+        println("\nDay 5 - Puzzle 2")
         loadDataFromFile("data5.txt")
         val numberOfNiceStrings = data.filter { isNice(it) }.count()
         println("Nice Strings: $numberOfNiceStrings")

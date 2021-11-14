@@ -8,8 +8,9 @@ import javax.imageio.ImageIO
 
 
 class Puzzle6A:BaseChallenge() {
-    private var image = BufferedImage(999, 999, BufferedImage.TYPE_INT_RGB)
+    private var image = BufferedImage(1000, 1000, BufferedImage.TYPE_INT_RGB)
     override fun run() {
+        println("\nDay 6 - Puzzle 1")
         loadDataFromFile("data6.txt")
 
         clearImageBuffer()

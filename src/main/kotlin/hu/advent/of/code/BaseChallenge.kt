@@ -1,17 +1,19 @@
 package hu.advent.of.code
 
-import com.google.common.io.Resources
-import java.io.File
+import java.util.*
 
 abstract class BaseChallenge {
 
-    lateinit var data:List<String>
+    var data = mutableListOf<String>()
 
     open fun run() {
         // To be overwritten
     }
 
     fun loadDataFromFile(filename: String) {
-        data = File(Resources.getResource(filename).toURI()).readLines()
+        val scanner = Scanner(this::class.java.getResourceAsStream("/$filename")!!)
+        while (scanner.hasNextLine()) {
+            data.add(scanner.nextLine())
+        }
     }
 }

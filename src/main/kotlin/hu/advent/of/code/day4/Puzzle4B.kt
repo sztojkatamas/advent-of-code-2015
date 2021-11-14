@@ -7,6 +7,7 @@ import java.security.MessageDigest
 
 class Puzzle4B:BaseChallenge() {
     override fun run() {
+        println("\nDay 4 - Puzzle 2")
         val mySecret = "bgvyzdsv"
         var salt = 1038700L // Speedup :)
 

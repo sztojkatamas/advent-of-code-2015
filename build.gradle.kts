@@ -31,7 +31,6 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.github.microutils:kotlin-logging-jvm:2.0.11")
     implementation("ch.qos.logback:logback-classic:1.2.6")
-    implementation("com.google.guava:guava:31.0.1-jre")
 
     testImplementation(kotlin("test"))
 }
