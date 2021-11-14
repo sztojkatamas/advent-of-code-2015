@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Test
 import kotlin.concurrent.thread
-import kotlin.random.Random
 
 class Puzzle5BTest {
 
@@ -33,7 +32,6 @@ class Puzzle5BTest {
     fun cctest() {
         map = mutableMapOf<String, Thread>()
 
-        val rnd = Random(Random.nextInt(1500))
         for (i in 1..3000) {
             map.put("XXX-$i", Thread("qwdqwd-$i"))
         }

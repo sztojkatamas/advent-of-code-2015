@@ -20,7 +20,7 @@ class Puzzle5B:BaseChallenge() {
     fun hasDoublesWithGap(stringToCheck: String):Boolean {
         if (stringToCheck.length > 2) {
             for (i in 3..stringToCheck.length) {
-                if (stringToCheck[i-3].toInt() - stringToCheck[i-1].toInt() == 0) {
+                if (stringToCheck[i-3] - stringToCheck[i-1] == 0) {
                     return true
                 }
             }

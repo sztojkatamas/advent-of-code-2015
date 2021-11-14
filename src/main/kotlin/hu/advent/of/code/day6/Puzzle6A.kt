@@ -3,7 +3,6 @@ package hu.advent.of.code.day6
 import hu.advent.of.code.BaseChallenge
 import java.awt.Color
 import java.awt.image.BufferedImage
-import java.awt.image.ColorModel
 import java.io.File
 import javax.imageio.ImageIO
 

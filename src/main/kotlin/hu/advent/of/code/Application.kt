@@ -10,7 +10,6 @@ import hu.advent.of.code.day4.Puzzle4A
 import hu.advent.of.code.day4.Puzzle4B
 import hu.advent.of.code.day5.Puzzle5A
 import hu.advent.of.code.day5.Puzzle5B
-import hu.advent.of.code.day6.Puzzle6A
 
 class Application {
     val puzzle1a = Puzzle1A()
