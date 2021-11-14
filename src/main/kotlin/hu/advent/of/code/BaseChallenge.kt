@@ -3,8 +3,7 @@ package hu.advent.of.code
 import com.google.common.io.Resources
 import java.io.File
 
-//open class
-abstract class BaseChallenge { ///}:Challenge {
+abstract class BaseChallenge {
 
     lateinit var data:List<String>
 

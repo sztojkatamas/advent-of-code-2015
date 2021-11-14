@@ -22,21 +22,18 @@ tasks {
 
 repositories {
     jcenter()
+    mavenCentral()
 }
 
 dependencies {
-//    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
-//    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("com.google.guava:guava:28.1-jre")
 
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.github.microutils:kotlin-logging-jvm:2.0.11")
     implementation("ch.qos.logback:logback-classic:1.2.6")
+    implementation("com.google.guava:guava:31.0.1-jre")
 
     testImplementation(kotlin("test"))
-//    testImplementation("org.jetbrains.kotlin:kotlin-test")
-//    testImplementation("org.jetbrains.kotlin:kotlin-test-testng")
 }
 
 tasks.withType<KotlinCompile> {
