@@ -2,14 +2,14 @@ package hu.advent.of.code.day6
 
 import hu.advent.of.code.BaseChallenge
 
-class Puzzle6A:BaseChallenge() {
+class Puzzle6B:BaseChallenge() {
 
-    var lamps = mutableMapOf<String, Lamp>()
+    var lamps = mutableMapOf<String, AdvancedLamp>()
     var lampsWith = 0
     var lampsHeight = 0
 
     override fun run() {
-        println("\nDay 6 - Puzzle 1")
+        println("\nDay 6 - Puzzle 2")
         loadDataFromFile("data6.txt")
         initLamps(1000, 1000)
         data.forEach {
@@ -20,7 +20,7 @@ class Puzzle6A:BaseChallenge() {
             }
         }
 
-        println("Lights on: ${countBrightLamps()}")
+        println("Lightlevel: ${countBrightnessOfTheLamps()}")
     }
 
     fun initLamps(x: Int, y: Int) {
@@ -28,30 +28,34 @@ class Puzzle6A:BaseChallenge() {
         lampsHeight = y
         repeat(x) { row ->
             repeat(y) { col ->
-                lamps["$row-$col"] = Lamp("$row-$col", false)
+                lamps["$row-$col"] = AdvancedLamp("$row-$col", 0)
             }
         }
     }
 
-    fun getLamp(key: String): Lamp {
+    fun getLamp(key: String): AdvancedLamp {
         return lamps.get(key)!!
     }
 
     fun toggleLamp(key: String) {
         val lamp = getLamp(key)
-        lamp.working = !lamp.working
+        lamp.level = lamp.level + 2
     }
 
-    fun countBrightLamps(): Int {
-        return  lamps.values.parallelStream().filter { it.working }.count().toInt()
+    fun countBrightnessOfTheLamps(): Int {
+        var brightness = 0
+        lamps.forEach { brightness += it.value.level}
+        return brightness
     }
 
     fun switchOnLamp(key: String) {
-        getLamp(key).working = true
+        getLamp(key).level++
     }
 
     fun switchOffLamp(key: String) {
-        getLamp(key).working = false
+        if (getLamp(key).level > 0) {
+            getLamp(key).level--
+        }
     }
 
     fun toggleLamps(corner1: String, corner2: String) {
@@ -96,4 +100,4 @@ class Puzzle6A:BaseChallenge() {
     }
 }
 
-data class Lamp(val name: String, var working: Boolean)
+data class AdvancedLamp(val name: String, var level: Int)
